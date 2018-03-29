@@ -9,3 +9,15 @@
 <%= link_to("Go to sample",
            :controller => 'main',
            :action => 'sample') %>
+<br/>
+<% @users.each do |user| %>
+  <hr>
+  <%= "Email: #{user.email}" %>
+  <br/>
+  <%= "Password: #{user.password}" %>
+  <br/>
+  <%= "Created at: #{user.created_at}" %>
+  <br/>
+
+<% end %>
+<hr>
